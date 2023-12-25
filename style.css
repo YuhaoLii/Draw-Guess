@@ -12,11 +12,87 @@ body {
     text-align: center;
 }
 
+#toolbox {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: left;
+}
+
+.colorButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+.eraser {
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 30px;
+}
+
+#penThickness {
+    margin-top: 20px;
+}
+
 #drawingCanvas {
     border: 2px solid black;
     background-color: white;
+    width: 800px; /* Adjusted width */
+    height: 600px; /* Adjusted height */
 }
 
 #guessSection {
     margin-top: 20px;
+}
+
+#playerSeats {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.seat {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+
+.seatIcon {
+    display: block;
+    font-size: 20px;
+}
+
+.playerProfile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#spectatorSection .clickable {
+    cursor: pointer;
+}
+#roomControls, #nameInputPage {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#playerName, #roomIdInput {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#enterGame, #joinRoom {
+    padding: 10px;
 }

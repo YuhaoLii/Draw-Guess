@@ -7,13 +7,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="gameContainer">
+
+    <!-- Add a section for creating or joining a room -->
+    <div id="roomControls">
+        <button id="createRoom">Create Room</button>
+        <input type="text" id="roomIdInput" placeholder="Enter Room ID">
+        <button id="joinRoom">Join Room</button>
+    </div>
+    
+    <!-- Name Input Page (Initially hidden) -->
+    <div id="nameInputPage" style="display: none;">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="playerName" placeholder="Enter Your Name">
+        <button id="enterGame">Enter Game</button>
+    </div>
+    
+    <div id="gameRoom" style="display: none;">
+
+ 
+        <div id="wordChoicesContainer">
+            <h2>Choose a Word to Draw</h2>
+            <ul id="wordChoicesList"></ul>
+        </div>
+
+        <div id="toolbox">
+            <div id="colorPalette">
+                <!-- Color Palette -->
+                <button class="colorButton" style="background-color: red;" data-color="red"></button>
+                <button class="colorButton" style="background-color: orange;" data-color="orange"></button>
+                <button class="colorButton" style="background-color: yellow;" data-color="yellow"></button>
+                <button class="colorButton" style="background-color: green;" data-color="green"></button>
+                <button class="colorButton" style="background-color: blue;" data-color="blue"></button>
+                <button class="colorButton" style="background-color: indigo;" data-color="indigo"></button>
+                <button class="colorButton" style="background-color: violet;" data-color="violet"></button>
+                <button class="colorButton" style="background-color: black;" data-color="black"></button>
+                <button class="colorButton" style="background-color: white;" data-color="white"></button>
+                <button class="colorButton" style="background-color: #f0f0f0;" data-color="#f0f0f0">Eraser</button>
+            </div>
+            <div id="penThickness">
+                <label for="penSize">Pen Size:</label>
+                <input type="range" id="penSize" min="1" max="10" value="5">
+            </div>
+        </div>
+
         <canvas id="drawingCanvas"></canvas>
+
         <div id="guessSection">
             <input type="text" id="guessInput" placeholder="Enter your guess here">
             <button id="submitGuess">Submit Guess</button>
         </div>
+
+        <div id="playerSeats">
+            <!-- Player Seats -->
+            <div class="seat" id="seat1"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat2"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat3"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat4"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat5"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat6"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+            <div class="seat" id="seat7"><span class="seatIcon">↓</span><div class="playerProfile"></div></div>
+        </div>
+
+        <div id="spectatorSection">
+            <div id="spectatorIcon" class="clickable">👁️</div>
+            <div id="spectatorInfo" style="display: none;"></div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
