@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#gameContainer {
+    text-align: center;
+}
+
+#drawingCanvas {
+    border: 2px solid black;
+    background-color: white;
+}
+
+#guessSection {
+    margin-top: 20px;
+}
